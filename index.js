@@ -43,23 +43,22 @@ inquirer.prompt([
 		},
 		{
 			type: "input",
-			name: "#CONTRIBUTORS",
+			name: "Contributors",
 			message: "Was this a group project (if so, list names of contributors)?",
 		},
 		{
 			type: "input",
-			name: "#LESSONS LEARNED",
+			name: "Lessons_Learned",
 			message: "What did you learn from building this app?",
 		},
 		{
 			type: "input",
-			name: "#IMAGE CREDITS",
+			name: "Image_Credits",
 			message: "Did you use any images? If so, list credits.",
 		},
 		{
 			type: "input",
-			name: "#LICENSES",
-			
+			name: "Licenses",
 			message: "List software and font licenses here.",
 		},
 	])
