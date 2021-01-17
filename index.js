@@ -1,50 +1,49 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-inquirer
-	.prompt([
+inquirer.prompt([
 		{
 			type: "input",
-			name: "#INTRODUCTION",
+			name: "Introduction",
 			message: "What is the goal of your project?",
 		},
 		{
 			type: "input",
-			name: "##Project Repo [Link](https://github.com/melissakinsey/loremipsum)",
+			name: "Project_Repo",
 			message: "What is the URL of the project repo?",
 		},
 		{
 			type: "input",
-			name: "##GitHub Pages [Link](https://melissakinsey.github.io/portfolio/index.html)",
+			name: "GitHub Pages [Link](https://melissakinsey.github.io/loremipsum)",
 			message: "What is the URL of the project in GitHub Pages?",
 		},
 		{
 			type: "input",
-			name: "##Screencast [Link](https://loremipsum)",
+			name: "Screencast",
 			message: "What is the URL of the screencast demo?",
 		},
 		{
 			type: "input",
-			name: "#USER STORY",
+			name: "User_Story",
 			message: "What is your user story (for example, *AS A* [type of user] *I WANT TO* [perform this task] *SO I CAN* [accomplish this goal])?",
 		},
 		{
 			type: "input",
-			name: "#DESCRIPTION",
+			name: "Description",
 			message: "How would you describe your project?",
 		},
 		{
 			type: "input",
-			name: "#FEATURES",
+			name: "Features",
 			message: "What are the features of the app?",
 		},
 		{
 			type: "input",
-			name: "#TECHNICAL SPECS",
+			name: "Technical_Specs",
 			message: "What technical specs does your project meet (for example, tools and frameworks used or APIs called)?",
 		},
 		{
 			type: "input",
-			name: "CONTRIBUTORS",
+			name: "#CONTRIBUTORS",
 			message: "Was this a group project (if so, list names of contributors)?",
 		},
 		{
@@ -61,34 +60,50 @@ inquirer
 			type: "input",
 			name: "#LICENSES",
 			
-			message: "List software and font licenses here. ",
+			message: "List software and font licenses here.",
 		},
 	])
 	.then(function (response) {
+		console.log(response)
 		data = `
-		##INTRODUCTION
+		# INTRODUCTION
+		${response["Introduction"]}
 				
-		##Project Repo [Link](https://github.com/melissakinsey/loremipsum) 
+		## Project Repo [Link](https://github.com/melissakinsey/loremipsum) 
+		${response["Project_Repo"]}
 		
-		##GitHub Pages [Link](https://melissakinsey.github.io/portfolio/index.html) 
-		
-		##Screencast [Link](https://loremipsum)
-		
-		#USER STORY
-		
-		#DESCRIPTION
+		## GitHub Pages [Link](https://melissakinsey.github.io/loremipsum) 
+		${response["GitHub_Pages"]}
 
-		#FEATURES
+		## Screencast [Link](https://loremipsum)
+		${response["Screencast"]}
 
-		#TECHNICAL SPECS
+		# USER STORY
+		${response["User_Story"]}
 
-		#CONTRIBUTORS
+		# DESCRIPTION
+		${response["Description"]}
+
+		# FEATURES
+		${response["Features"]}
+
+		# TECHNICAL SPECS
+		${response["Technical Specs"]}
+
+		# CONTRIBUTORS
+		${response["Contributors"]}
 			
-		#LESSONS LEARNED 
+		# LESSONS LEARNED 
+		${response["Lessons_Learned"]}
+
+		# IMAGE CREDITS
+		${response["Image_Credits"]}
+
+		# LICENSES
+		${response["Licenses"]}
 		
-		#IMAGE CREDITS
-	
-		#LICENSES `;
+		`;
+
 		fs.writeFile("README.md", data, function (error) {
 			if (error) {
 				console.error(error);
