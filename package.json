@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/melissakinsey/readme-generator#readme",
   "dependencies": {
+    "canvas": "^2.6.1",
     "inquirer": "^7.3.3"
   }
 }
