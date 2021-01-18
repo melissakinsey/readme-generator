@@ -12,7 +12,7 @@ inquirer.prompt([
 		type: "input",
 		name: "Project_Repo",
 		message: "What is the URL of the project repo?",
-		default: "[Link](https://github.com/melissakinsey/readme-generator)",
+		default: "[Readme Generator Repo](https://github.com/melissakinsey/readme-generator)",
 	},
 	{
 		type: "input",
@@ -54,21 +54,20 @@ inquirer.prompt([
 	},
 	{
 		type: "input",
-		name: "Contributors",
-		message: "If this was a group project, list names of the contributors.",
-		default: "This was an individual project.",
-	},
-	{
-		type: "input",
 		name: "Lessons_Learned",
 		message: "What did you learn from building this app?",
 	},
 	{
 		type: "input",
+		name: "Contributions",
+		message: "If this was a group project, list names of the contributors.",
+		default: "This was an individual project.",
+	},
+	{
+		type: "input",
 		name: "Image_Credits",
 		message: "List image credits.",
-		default: "Header adapted from image by filo/iStockPhoto".anchor.
-		 "Badges created using Michael Currin's nifty [Badge Generator](https://michaelcurrin.github.io/badge-generator/#/repo)",
+		default: "Header adapted from image by filo/iStockPhoto.  Badges created using Michael Currin's nifty [Badge Generator](https://michaelcurrin.github.io/badge-generator/#/repo)",
 	},
 	{
 		type: "input",
@@ -80,7 +79,7 @@ inquirer.prompt([
 		type: "input",
 		name: "Questions",
 		message: "Where can users reach you for questions?",
-		default: "Questions? Ping me @melissakinsey (GitHub), @KinseyMelissa (Twitter) or kinsey.melissa@gmail.com.",
+		default: "To ask questions or contribute project feedback, ping me @melissakinsey (GitHub), @KinseyMelissa (Twitter) or kinsey.melissa@gmail.com.",
 	},
 ])
 .then(function (response) {
@@ -105,10 +104,9 @@ inquirer.prompt([
 * [Features](#Features)
 * [Technical Specs](#Technical_Specs)
 * [Tests](#Tests)
-* [Contributors](#Contributors)
 * [Lessons Learned](#Lessons_Learned)
-* [Credits] (#Credits)
-* [Questions](#Questions)
+* [Contributions](#Contributions)
+
 	
 # DESCRIPTION
 ${response["Description"]}
@@ -140,20 +138,19 @@ ${response["Technical_Specs"]}
 # TESTS
 ${response["Tests"]}
 	
-# CONTRIBUTORS
-${response["Contributors"]}
-	
 # LESSONS LEARNED 
 ${response["Lessons_Learned"]}
+
+# CONTRIBUTIONS
+${response["Contributions"]}
 	
-# CREDITS
-## Image Credits
+## IMAGE CREDITS
 ${response["Image_Credits"]}
 	
-## Fonts
+## FONTS
 ${response["Fonts"]}
 
-# QUESTIONS
+## QUESTIONS
 ${response["Questions"]}
 `;
 	
