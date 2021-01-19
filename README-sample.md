@@ -34,7 +34,7 @@ Why reinvent the wheel? This app lets you generate prefilled README.md documents
 Not applicable for this project.
 	
 ## Screencast
-To come
+[YouTube Demo](https://youtu.be/GyL4_CRJC34)
 	
 # USER STORY
 *AS A* boot camp student whose brain has fallen into a sinkhole, *I WANT TO* automate creation of my README documents *SO I CAN* save time and avoid a catastrophic yet glorious mental collapse.
